@@ -1,0 +1,664 @@
+{
+  "knex_migrations": {
+    "rows": [
+      {
+        "id": 1,
+        "name": "20240124161706_init.js",
+        "batch": 1,
+        "migration_time": "2024-01-26T01:02:43.307Z"
+      }
+    ],
+    "pks": [
+      "id"
+    ],
+    "indexed": {
+      "1": {
+        "id": 1,
+        "name": "20240124161706_init.js",
+        "batch": 1,
+        "migration_time": "2024-01-26T01:02:43.307Z"
+      }
+    },
+    "schema": [
+      {
+        "name": "id",
+        "datatype": "integer",
+        "isnullable": false,
+        "defaultvalue": "nextval('knex_migrations_id_seq'::regclass)",
+        "position": 1,
+        "pk": true,
+        "fk": false
+      },
+      {
+        "name": "name",
+        "datatype": "character varying",
+        "isnullable": true,
+        "defaultvalue": null,
+        "position": 2,
+        "pk": false,
+        "fk": false
+      },
+      {
+        "name": "batch",
+        "datatype": "integer",
+        "isnullable": true,
+        "defaultvalue": null,
+        "position": 3,
+        "pk": false,
+        "fk": false
+      },
+      {
+        "name": "migration_time",
+        "datatype": "timestamp with time zone",
+        "isnullable": true,
+        "defaultvalue": null,
+        "position": 4,
+        "pk": false,
+        "fk": false
+      }
+    ]
+  },
+  "knex_migrations_lock": {
+    "rows": [
+      {
+        "index": 1,
+        "is_locked": 0
+      }
+    ],
+    "pks": [
+      "index"
+    ],
+    "indexed": {
+      "1": {
+        "index": 1,
+        "is_locked": 0
+      }
+    },
+    "schema": [
+      {
+        "name": "index",
+        "datatype": "integer",
+        "isnullable": false,
+        "defaultvalue": "nextval('knex_migrations_lock_index_seq'::regclass)",
+        "position": 1,
+        "pk": true,
+        "fk": false
+      },
+      {
+        "name": "is_locked",
+        "datatype": "integer",
+        "isnullable": true,
+        "defaultvalue": null,
+        "position": 2,
+        "pk": false,
+        "fk": false
+      }
+    ]
+  },
+  "personas": {
+    "rows": [
+      {
+        "id": 1,
+        "email": "admin@admin.com",
+        "password": "123456",
+        "nombre": "admin",
+        "apellido": "admin",
+        "DNI": "12345678",
+        "editorId": 1,
+        "fechaEdicion": 1
+      }
+    ],
+    "pks": [
+      "id"
+    ],
+    "indexed": {
+      "1": {
+        "id": 1,
+        "email": "admin@admin.com",
+        "password": "123456",
+        "nombre": "admin",
+        "apellido": "admin",
+        "DNI": "12345678",
+        "editorId": 1,
+        "fechaEdicion": 1
+      }
+    },
+    "schema": [
+      {
+        "name": "id",
+        "datatype": "integer",
+        "isnullable": false,
+        "defaultvalue": "nextval('personas_id_seq'::regclass)",
+        "position": 1,
+        "pk": true,
+        "fk": false
+      },
+      {
+        "name": "email",
+        "datatype": "character varying",
+        "isnullable": false,
+        "defaultvalue": null,
+        "position": 2,
+        "pk": false,
+        "fk": false
+      },
+      {
+        "name": "password",
+        "datatype": "character varying",
+        "isnullable": true,
+        "defaultvalue": null,
+        "position": 3,
+        "pk": false,
+        "fk": false
+      },
+      {
+        "name": "nombre",
+        "datatype": "character varying",
+        "isnullable": true,
+        "defaultvalue": null,
+        "position": 4,
+        "pk": false,
+        "fk": false
+      },
+      {
+        "name": "apellido",
+        "datatype": "character varying",
+        "isnullable": true,
+        "defaultvalue": null,
+        "position": 5,
+        "pk": false,
+        "fk": false
+      },
+      {
+        "name": "DNI",
+        "datatype": "character varying",
+        "isnullable": true,
+        "defaultvalue": null,
+        "position": 6,
+        "pk": false,
+        "fk": false
+      },
+      {
+        "name": "editorId",
+        "datatype": "integer",
+        "isnullable": false,
+        "defaultvalue": null,
+        "position": 7,
+        "pk": false,
+        "fk": true
+      },
+      {
+        "name": "fechaEdicion",
+        "datatype": "bigint",
+        "isnullable": false,
+        "defaultvalue": null,
+        "position": 8,
+        "pk": false,
+        "fk": false
+      }
+    ],
+    "cdc": {
+      "count": 1,
+      "keys": {
+        "1": [
+          {
+            "cdc_id": 1,
+            "cdc_action": "INSERT",
+            "cdc_created_at": 1706231026202,
+            "id": 1,
+            "editorId": 1,
+            "fechaEdicion": 1,
+            "nombre": "admin",
+            "apellido": "admin",
+            "DNI": "12345678",
+            "email": "admin@admin.com",
+            "password": "123456"
+          }
+        ]
+      },
+      "rows": [
+        {
+          "cdc_id": 1,
+          "cdc_action": "INSERT",
+          "cdc_created_at": 1706231026202,
+          "id": 1,
+          "editorId": 1,
+          "fechaEdicion": 1,
+          "nombre": "admin",
+          "apellido": "admin",
+          "DNI": "12345678",
+          "email": "admin@admin.com",
+          "password": "123456"
+        }
+      ]
+    },
+    "lastChanges": [
+      {
+        "cdc_id": 1,
+        "cdc_action": "INSERT",
+        "cdc_created_at": 1706231026202,
+        "data": {
+          "id": 1,
+          "editorId": 1,
+          "fechaEdicion": 1,
+          "nombre": "admin",
+          "apellido": "admin",
+          "DNI": "12345678",
+          "email": "admin@admin.com",
+          "password": "123456"
+        },
+        "hash": "71b33cfe0737147fa6212e84e66b3f081bb9d999b406fcc93faf36eb21cbedd8"
+      }
+    ]
+  },
+  "empresas": {
+    "rows": [
+      {
+        "id": 1,
+        "nombre": 3,
+        "sector": 3,
+        "editorId": 1,
+        "fechaEdicion": 1
+      },
+      {
+        "id": 2,
+        "nombre": 2,
+        "sector": 5,
+        "editorId": 1,
+        "fechaEdicion": 2
+      }
+    ],
+    "pks": [
+      "id"
+    ],
+    "indexed": {
+      "1": {
+        "id": 1,
+        "nombre": 3,
+        "sector": 3,
+        "editorId": 1,
+        "fechaEdicion": 1
+      },
+      "2": {
+        "id": 2,
+        "nombre": 2,
+        "sector": 5,
+        "editorId": 1,
+        "fechaEdicion": 2
+      }
+    },
+    "schema": [
+      {
+        "name": "id",
+        "datatype": "integer",
+        "isnullable": false,
+        "defaultvalue": "nextval('empresas_id_seq'::regclass)",
+        "position": 1,
+        "pk": true,
+        "fk": false
+      },
+      {
+        "name": "nombre",
+        "datatype": "integer",
+        "isnullable": false,
+        "defaultvalue": null,
+        "position": 2,
+        "pk": false,
+        "fk": false
+      },
+      {
+        "name": "sector",
+        "datatype": "integer",
+        "isnullable": false,
+        "defaultvalue": null,
+        "position": 3,
+        "pk": false,
+        "fk": false
+      },
+      {
+        "name": "editorId",
+        "datatype": "integer",
+        "isnullable": false,
+        "defaultvalue": null,
+        "position": 4,
+        "pk": false,
+        "fk": true
+      },
+      {
+        "name": "fechaEdicion",
+        "datatype": "bigint",
+        "isnullable": false,
+        "defaultvalue": null,
+        "position": 5,
+        "pk": false,
+        "fk": false
+      }
+    ],
+    "cdc": {
+      "count": 4,
+      "keys": {
+        "1": [
+          {
+            "cdc_id": 1,
+            "cdc_action": "INSERT",
+            "cdc_created_at": 1706231052276,
+            "id": 1,
+            "nombre": 1,
+            "sector": 1,
+            "editorId": 1,
+            "fechaEdicion": 1
+          },
+          {
+            "cdc_id": 3,
+            "cdc_action": "UPDATE",
+            "cdc_created_at": 1706231057663,
+            "id": 1,
+            "nombre": 3,
+            "sector": 3,
+            "editorId": 1,
+            "fechaEdicion": 1
+          }
+        ],
+        "2": [
+          {
+            "cdc_id": 2,
+            "cdc_action": "INSERT",
+            "cdc_created_at": 1706231052276,
+            "id": 2,
+            "nombre": 2,
+            "sector": 2,
+            "editorId": 1,
+            "fechaEdicion": 2
+          },
+          {
+            "cdc_id": 4,
+            "cdc_action": "UPDATE",
+            "cdc_created_at": 1706231057663,
+            "id": 2,
+            "nombre": 2,
+            "sector": 5,
+            "editorId": 1,
+            "fechaEdicion": 2
+          }
+        ]
+      },
+      "rows": [
+        {
+          "cdc_id": 1,
+          "cdc_action": "INSERT",
+          "cdc_created_at": 1706231052276,
+          "id": 1,
+          "nombre": 1,
+          "sector": 1,
+          "editorId": 1,
+          "fechaEdicion": 1
+        },
+        {
+          "cdc_id": 2,
+          "cdc_action": "INSERT",
+          "cdc_created_at": 1706231052276,
+          "id": 2,
+          "nombre": 2,
+          "sector": 2,
+          "editorId": 1,
+          "fechaEdicion": 2
+        },
+        {
+          "cdc_id": 3,
+          "cdc_action": "UPDATE",
+          "cdc_created_at": 1706231057663,
+          "id": 1,
+          "nombre": 3,
+          "sector": 3,
+          "editorId": 1,
+          "fechaEdicion": 1
+        },
+        {
+          "cdc_id": 4,
+          "cdc_action": "UPDATE",
+          "cdc_created_at": 1706231057663,
+          "id": 2,
+          "nombre": 2,
+          "sector": 5,
+          "editorId": 1,
+          "fechaEdicion": 2
+        }
+      ]
+    },
+    "lastChanges": [
+      {
+        "cdc_id": 1,
+        "cdc_action": "INSERT",
+        "cdc_created_at": 1706231052276,
+        "data": {
+          "id": 1,
+          "nombre": 1,
+          "sector": 1,
+          "editorId": 1,
+          "fechaEdicion": 1
+        },
+        "hash": "e030b033ff9da0da8e8103de4a205ad20f744acb9413aea3018592d6ba3e18db"
+      },
+      {
+        "cdc_id": 2,
+        "cdc_action": "INSERT",
+        "cdc_created_at": 1706231052276,
+        "data": {
+          "id": 2,
+          "nombre": 2,
+          "sector": 2,
+          "editorId": 1,
+          "fechaEdicion": 2
+        },
+        "hash": "fe07d82c92366a1c3038609c3c8b82529d0e077eedc6f134d0d00f36d016fe5f"
+      },
+      {
+        "cdc_id": 3,
+        "cdc_action": "UPDATE",
+        "cdc_created_at": 1706231057663,
+        "data": {
+          "id": 1,
+          "nombre": 3,
+          "sector": 3,
+          "editorId": 1,
+          "fechaEdicion": 1
+        },
+        "hash": "e7cd2e053df8ceb8b4e75c9ad613386438dfce5ba7dbb672b3151647c1c5838d"
+      },
+      {
+        "cdc_id": 4,
+        "cdc_action": "UPDATE",
+        "cdc_created_at": 1706231057663,
+        "data": {
+          "id": 2,
+          "nombre": 2,
+          "sector": 5,
+          "editorId": 1,
+          "fechaEdicion": 2
+        },
+        "hash": "9c2688ba0f56675430635c6f48729b0f1f42ecc2a91fbaab745134925bbe62eb"
+      }
+    ]
+  },
+  "productos": {
+    "rows": [],
+    "pks": [
+      "id"
+    ],
+    "indexed": {},
+    "schema": [
+      {
+        "name": "id",
+        "datatype": "integer",
+        "isnullable": false,
+        "defaultvalue": "nextval('productos_id_seq'::regclass)",
+        "position": 1,
+        "pk": true,
+        "fk": false
+      },
+      {
+        "name": "nombre",
+        "datatype": "character varying",
+        "isnullable": false,
+        "defaultvalue": null,
+        "position": 2,
+        "pk": false,
+        "fk": false
+      },
+      {
+        "name": "descripcion",
+        "datatype": "character varying",
+        "isnullable": true,
+        "defaultvalue": null,
+        "position": 3,
+        "pk": false,
+        "fk": false
+      },
+      {
+        "name": "editorId",
+        "datatype": "integer",
+        "isnullable": false,
+        "defaultvalue": null,
+        "position": 4,
+        "pk": false,
+        "fk": true
+      },
+      {
+        "name": "fechaEdicion",
+        "datatype": "bigint",
+        "isnullable": false,
+        "defaultvalue": null,
+        "position": 5,
+        "pk": false,
+        "fk": false
+      }
+    ],
+    "cdc": {
+      "count": 0,
+      "keys": {},
+      "rows": []
+    },
+    "lastChanges": []
+  },
+  "compras": {
+    "rows": [],
+    "pks": [
+      "id"
+    ],
+    "indexed": {},
+    "schema": [
+      {
+        "name": "id",
+        "datatype": "integer",
+        "isnullable": false,
+        "defaultvalue": "nextval('compras_id_seq'::regclass)",
+        "position": 1,
+        "pk": true,
+        "fk": false
+      },
+      {
+        "name": "compradorId",
+        "datatype": "integer",
+        "isnullable": false,
+        "defaultvalue": null,
+        "position": 2,
+        "pk": false,
+        "fk": true
+      },
+      {
+        "name": "editorId",
+        "datatype": "integer",
+        "isnullable": false,
+        "defaultvalue": null,
+        "position": 3,
+        "pk": false,
+        "fk": true
+      },
+      {
+        "name": "fechaEdicion",
+        "datatype": "bigint",
+        "isnullable": false,
+        "defaultvalue": null,
+        "position": 4,
+        "pk": false,
+        "fk": false
+      }
+    ],
+    "cdc": {
+      "count": 0,
+      "keys": {},
+      "rows": []
+    },
+    "lastChanges": []
+  },
+  "productosComprasMap": {
+    "rows": [],
+    "pks": [
+      "compraId",
+      "productoId"
+    ],
+    "indexed": {},
+    "schema": [
+      {
+        "name": "compraId",
+        "datatype": "integer",
+        "isnullable": false,
+        "defaultvalue": null,
+        "position": 1,
+        "pk": true,
+        "fk": false
+      },
+      {
+        "name": "compraId",
+        "datatype": "integer",
+        "isnullable": false,
+        "defaultvalue": null,
+        "position": 1,
+        "pk": false,
+        "fk": true
+      },
+      {
+        "name": "productoId",
+        "datatype": "integer",
+        "isnullable": false,
+        "defaultvalue": null,
+        "position": 2,
+        "pk": true,
+        "fk": false
+      },
+      {
+        "name": "productoId",
+        "datatype": "integer",
+        "isnullable": false,
+        "defaultvalue": null,
+        "position": 2,
+        "pk": false,
+        "fk": true
+      },
+      {
+        "name": "editorId",
+        "datatype": "integer",
+        "isnullable": false,
+        "defaultvalue": null,
+        "position": 3,
+        "pk": false,
+        "fk": true
+      },
+      {
+        "name": "fechaEdicion",
+        "datatype": "bigint",
+        "isnullable": false,
+        "defaultvalue": null,
+        "position": 4,
+        "pk": false,
+        "fk": false
+      }
+    ],
+    "cdc": {
+      "count": 0,
+      "keys": {},
+      "rows": []
+    },
+    "lastChanges": []
+  }
+}
